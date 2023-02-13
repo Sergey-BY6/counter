@@ -11,6 +11,7 @@ type SettingsDisplayType = {
     minValuePreset: number
     maxValuePreset: number
     setButtonSettingsDisabled: (value: boolean) => void
+
 }
 
 export const SettingsDisplay: React.FC<SettingsDisplayType> = (props) => {
@@ -24,15 +25,17 @@ export const SettingsDisplay: React.FC<SettingsDisplayType> = (props) => {
             <div className={s.displaySettingsInput}>
                 <Input callback={props.setMaxValuePreset}
                        value={props.maxValuePreset}
-                       setButtonSettingsDisabled={props.setButtonSettingsDisabled}/>
+                       valueClassNameMax={props.maxValuePreset}
+                       valueClassNameMin={props.minValuePreset}
+                       setButtonSettingsDisabled={props.setButtonSettingsDisabled}
+                />
                 <Input callback={props.setMinValuePreset}
                        value={props.minValuePreset}
+                       valueClassNameMax={props.maxValuePreset}
+                       valueClassNameMin={props.minValuePreset}
                        setButtonSettingsDisabled={props.setButtonSettingsDisabled}
                 />
             </div>
-
-            {/*<div className={s.displaySettingsItems}>max value: <Input/></div>*/}
-            {/*<div className={s.displaySettingsItems}>start value: <Input/></div>*/}
         </div>
     );
 };
