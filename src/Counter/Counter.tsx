@@ -18,9 +18,9 @@ export const Counter = () => {
     const buttonDisabledReset = minValue === 0 || minValuePreset < 0 || minValuePreset > maxValuePreset || minValuePreset === minValue || !buttonSettingsDisabled
     const BtnSettingsDisbled = minValuePreset < 0 || minValuePreset >= maxValuePreset ? true : buttonSettingsDisabled
 
-    useEffect(()=> {
-        let min = localStorage.getItem("minValueCounter")
-        let max = localStorage.getItem("maxValueCounter")
+    useEffect(() => {
+        let min = localStorage.getItem('minValueCounter')
+        let max = localStorage.getItem('maxValueCounter')
         if (min) {
             setMinValue(JSON.parse(min))
             setMinValuePreset(JSON.parse(min))
@@ -30,13 +30,13 @@ export const Counter = () => {
             setMaxValuePreset(JSON.parse(max))
         }
 
-    },[])
+    }, [])
 
 
-    useEffect (()=> {
-        localStorage.setItem("minValueCounter", JSON.stringify(minValuePreset))
-        localStorage.setItem("maxValueCounter", JSON.stringify(maxValuePreset))
-    },[minValue, maxValue])
+    // useEffect (()=> {
+    //     localStorage.setItem("minValueCounter", JSON.stringify(minValuePreset))
+    //     localStorage.setItem("maxValueCounter", JSON.stringify(maxValuePreset))
+    // },[minValue, maxValue])
 
 
     const incValue = () => {
@@ -51,11 +51,15 @@ export const Counter = () => {
         setMaxValue(maxValuePreset)
         setMinValue(minValuePreset)
         setButtonSettingsDisabled(true)
-
+        localStorage.setItem('minValueCounter', JSON.stringify(minValuePreset))
+        localStorage.setItem('maxValueCounter', JSON.stringify(maxValuePreset))
     }
 
 
-    const displayValue = minValuePreset < 0 || minValuePreset >= maxValuePreset ?  <div className={s.displayIncorrected} >Incorrected value!</div>  : ( buttonSettingsDisabled ? <Display minValue={minValue} maxValue={maxValue} /> : <div className={s.displayCorrected} >Enter values and press 'set'</div>)
+    const displayValue = minValuePreset < 0 || minValuePreset >= maxValuePreset ?
+        <div className={s.displayIncorrected}>Incorrected value!</div> : (buttonSettingsDisabled ?
+            <Display minValue={minValue} maxValue={maxValue}/> :
+            <div className={s.displayCorrected}>Enter values and press 'set'</div>)
 
 
     return (
