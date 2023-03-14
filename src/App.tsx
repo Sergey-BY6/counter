@@ -1,7 +1,12 @@
 import React from 'react';
 import './App.css';
-import {Counter} from './Counter/Counter';
-import {Counter2} from './Counter2/Counter2';
+import {CounterRedux} from './CounterRedux/CounterRedux';
+import {Counter2Redux} from './Counter2Redux/Counter2Redux';
+import {store} from './CounterRedux/ReduxCounter/store';
+import {Provider} from 'react-redux';
+import {store2} from './Counter2Redux/ReduxCounter2/store2';
+
+
 
 
 
@@ -9,8 +14,12 @@ import {Counter2} from './Counter2/Counter2';
 function App() {
   return (
     <div className="App">
-        <Counter/>
-        <Counter2/>
+        <Provider store={store}>
+            <CounterRedux/>
+        </Provider>
+        <Provider store={store2}>
+            <Counter2Redux/>
+        </Provider>
     </div>
   );
 }

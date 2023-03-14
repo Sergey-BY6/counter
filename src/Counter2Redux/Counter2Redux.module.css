@@ -1,0 +1,180 @@
+
+.counterMainDiv {
+    display: flex;
+    justify-content: center;
+    background-color: #19324f;
+    height: 100vh;
+
+}
+
+
+.counterMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 400px;
+    height: 250px;
+    border: 1px solid aqua;
+    border-radius: 7px;
+    margin: 100px 50px 100px 50px;
+}
+
+
+.display {
+    width: 360px;
+    height: 120px;
+    background-color: #19324f;
+    border: 1px solid aqua;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+
+.displaySettings {
+    display: flex;
+    flex-direction: row;
+
+    width: 360px;
+    height: 120px;
+    background-color: #19324f;
+    border: 1px solid aqua;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+
+.buttonMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid aqua;
+    width: 360px;
+    height: 80px;
+    border-radius: 7px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid aqua;
+    border-radius: 7px;
+    background-color: aqua;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 35px;
+    font-weight: bold;
+
+    /*для выравнивание текста в кнопке*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*.displaySettingsItems {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    color: aqua;*/
+/*    font-size: 22px;*/
+/*    padding-left: 10px;*/
+/*}*/
+
+/*.displaySettinrgsInput {*/
+/*    width: 100px;*/
+/*    margin-left: 10px;*/
+/*}*/
+
+.displaySettingsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    margin: 7px 0 0 10px;
+    color: aqua;
+    font-size: 28px;
+}
+
+.displaySettingsInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px 0 0 60px;
+    height: 100px;
+}
+
+.input {
+    text-align: center;
+    width: 120px;
+    height: 25px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid skyblue;
+}
+
+.inputInCorected {
+    text-align: center;
+    width: 120px;
+    height: 25px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid red;
+    background-color: #fac3c3fc;
+}
+
+
+.displayIncorrected {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    height: 120px;
+    background-color: #19324f;
+    border: 1px solid aqua;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 20px;
+    align-items: center;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.displayCorrected {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    height: 120px;
+    background-color: #19324f;
+    border: 1px solid aqua;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 20px;
+    align-items: center;
+    color: greenyellow;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+/*для выравнивание текста в дисплее*/
+.text {
+    font-size: 75px;
+    font-weight: bold;
+    color: aqua;
+}
+
+.textRed {
+    font-size: 75px;
+    font-weight: bold;
+    color: red;
+}
